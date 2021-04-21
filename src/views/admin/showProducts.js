@@ -23,7 +23,7 @@ class ShowUsers extends React.Component {
     };
 
     axios
-      .get('https://serverest.dev/produtos', config)
+      .get('https://serverest-api-agilizei-com.umbler.net/produtos', config)
       .then((response) => {
         const produtos = response.data;
         this.setState({ products: produtos.produtos });
@@ -31,7 +31,7 @@ class ShowUsers extends React.Component {
   }
 
   removeProduct(id) {
-    const url = `https://serverest.dev/produtos/${id}`
+    const url = `https://serverest-api-agilizei-com.umbler.net/produtos/${id}`
     const config = {
       headers: {
         'Access-Control-Allow-Origin': '*',

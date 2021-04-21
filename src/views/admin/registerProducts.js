@@ -42,7 +42,7 @@ class RegisterProducts extends React.Component {
 
      if (this.state.imagem == '' || null || undefined) {
       axios
-      .post('https://serverest.dev/produtos',
+      .post('https://serverest-api-agilizei-com.umbler.net/produtos',
         {
           nome: this.state.name,
           preco: this.state.price,
@@ -59,7 +59,7 @@ class RegisterProducts extends React.Component {
         })
      } else {
       axios
-      .post('https://serverest.dev/produtos',
+      .post('https://serverest-api-agilizei-com.umbler.net/produtos',
         {
           nome: this.state.name,
           preco: this.state.price,

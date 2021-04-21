@@ -24,7 +24,7 @@ class ShowUsers extends React.Component {
     };
 
     axios
-      .get('https://serverest.dev/usuarios', config)
+      .get('https://serverest-api-agilizei-com.umbler.net/usuarios', config)
       .then((response) => {
         const usuarios = response.data;
         this.setState({ persons: usuarios.usuarios });
@@ -36,7 +36,7 @@ class ShowUsers extends React.Component {
     if (email === emailStorage) {
       this.setState( { msg_error: ["Não é possível excluir o próprio usuário!"] } );
     } else {
-      const url = `https://serverest.dev/usuarios/${id}`;
+      const url = `https://serverest-api-agilizei-com.umbler.net/usuarios/${id}`;
       axios.delete(url).then(res => { window.location.reload(); });
     }
   }

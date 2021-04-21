@@ -33,7 +33,7 @@ class RegisterUsers extends React.Component {
   submitHandler = e => {
     e.preventDefault();
     axios
-      .post('https://serverest.dev/usuarios', {
+      .post('https://serverest-api-agilizei-com.umbler.net/usuarios', {
         nome: this.state.name,
         email:this.state.email,
         password: this.state.password,
